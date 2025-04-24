@@ -14,23 +14,22 @@ interface ProductProps {
 
 const ProductItem: React.FC<ProductProps> = ({ name, currentPrice, originalPrice, image }) => {
   return (
-    <div className='product-card'>
- <div className="product-item">
+    <div className="product-card">
       <div className="product-image">
         <img src={image} alt={name} />
       </div>
-      <div className="product-details">
+      <div className="product-info">
         <div className="product-name">{name}</div>
-        <div className="product-pricing">
-          <div className="current-price">${currentPrice.toFixed(2)}</div>
-          <div className="orig  inal-price">${originalPrice.toFixed(2)}</div>
-        </div>
+      
       </div>
+      <div className="product-pricing">
+          <span className="current-price">${currentPrice.toFixed(2)}</span>
+          <span className="original-price">${originalPrice.toFixed(2)}</span>
+        </div>
       <div className="product-arrow">→</div>
     </div>
-    </div>
-   
   );
+  
 };
 const ProductSection: React.FC = () => {
     const products = [
@@ -55,7 +54,7 @@ const ProductSection: React.FC = () => {
     ];  return (
       <div className="">
        <div className='section-main'>
-       <h2 className="section-title">Popular Product</h2> 
+       <h3 className="section-title">Popular Product</h3> 
         <div className="section-header">
             <a href="#" className="view-all">
               View all →

@@ -28,13 +28,13 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-
 .doctor-card {
   display: flex;
   background-color: #f6f5f8;
   border-radius: 8px;
   padding: 16px;
 }
+
 
 .doctor-avatar {
   width: 50px;
@@ -72,10 +72,11 @@
 
 .doctor-rating {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   font-size: 13px;
   color: #667085;
-  gap: 4px; /* Added gap between rating and reviews */
+  gap: 4px; 
 }
 
 .rating-info {

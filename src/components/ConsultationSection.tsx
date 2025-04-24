@@ -15,7 +15,7 @@ const ConsultationSection: React.FC = () => {
 
   return (
     <div className="upcoming">
-      <h2>Upcoming Consultation</h2>
+      <h3>Upcoming Consultation</h3>
 
       <div className="consultation-section">
         <div className="section-header"></div>

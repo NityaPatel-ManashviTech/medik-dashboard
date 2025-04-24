@@ -43,7 +43,7 @@ const HealthPackageSection: React.FC = () => {
     return (
       <div className='sectiom-main'>
        <div className='section-main'>
-       <h2 className="pacakage-title">Popular Product</h2> 
+       <h3 className="pacakage-title">Popular Product</h3> 
         <div className="section-header">
             <a href="#" className="view-all">
               View all →

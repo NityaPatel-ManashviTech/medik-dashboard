@@ -1,150 +1,129 @@
+.upcoming {
+  /* padding: 1rem; */
+}
+
+.upcoming h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
 .consultation-section {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-  }
-  
-  .consultation-card {
-    margin-top: 16px;
-  }
-  
-  .doctor-info {
-    display: flex;
-
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  
-  .doctor-details {
-    flex: 1;
-  }
-  
-  .appointment-details {
-    display: flex;
-    gap: 16px;
-    background-color: #eaebef;
-    margin-bottom: 16px;
-  }
-
- 
-  
-  .appointment-date, .appointment-time {
-    display: flex;
-    align-items: center;
-    font-size: 13px;
-    color: #667085;
-
-  }
-  
-  .calendar-icon, .clock-icon {
-    margin-right: 6px;
-  }
-  
-  .appointment-actions {
-    display: flex;
-    gap: 12px;
-  }
-  
-  .cancel-btn, .reschedule-btn {
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-size: 14px;
-    cursor: pointer;
-    outline: none;
-  }
-  
-  .cancel-btn {
-    background-color: #ffffff;
-    border: 1px solid #d1d5db;
-    color: #374151;
-  }
-  
-  .reschedule-btn {
-    background-color: #22c55e;
-    border: none;
-    color: #ffffff;
-  }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 1200px) {
-    .doctor-cards {
-      grid-template-columns: 1fr;
-    }
-    
-    .dashboard-content {
-      flex-direction: column;
-    }
-    
-    .dashboard-main, .dashboard-side {
-      width: 100%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .app {
-      flex-direction: column;
-    }
-    
-    .sidebar {
-      width: 100%;
-      padding: 10px;
-    }
-    
-    .sidebar-nav {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    
-    .sidebar-item {
-      width: auto;
-    }
-    
-    .product-health-row {
-      flex-direction: column;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    
-    .header-left, .header-right {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-    
-    .search-bar {
-      width: 100%;
-    }
-    
-    .welcome-container {
-      position: relative;
-      top: auto;
-      margin-top: 20px;
-    }
-    
-    .appointment-details {
-      flex-direction: column;
- 
-      gap: 8px;
-    }
-  }
-  .consult-info {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; 
-  }
-  .upcomingc-info{
   display: flex;
+  justify-content: center;
+}
+
+.consultation-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.consult-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.upcomingc-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.doctor-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.doctor-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-name {
+  font-weight: bold;
+}
+
+.doctor-specialty {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.appointment-details {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.appointment-date,
+.appointment-time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1 1 45%;
+}
+
+input[type="date"],
+input[type="time"] {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.appointment-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cancel-btn,
+.reschedule-btn {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancel-btn {
+  background-color: white;
+  color: black;
+  border: 1px solid rgb(202, 205, 206);
+}
+
+.reschedule-btn {
+  background-color:  #23c8c3;
+  color: white;
+}
+
+
+@media (max-width: 600px) {
+  .consultation-card {
+    padding: 2rem;
   }
-  input[type="date"], input[type="time"] {
-    background-color: transparent; 
-    border: none; 
-    outline: none;
-    color: inherit; 
+
+  .appointment-details {
+    flex-direction: column;
   }
+
+  .appointment-date,
+  .appointment-time {
+    flex: 1 1 100%;
+  }
+
+  .appointment-actions {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .reschedule-btn {
+    width: 100%;
+  }
+}

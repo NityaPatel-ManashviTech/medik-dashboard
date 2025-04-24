@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaHome, FaCalendarAlt, FaFlask, FaPills, FaHeart, FaUsers, FaClipboardList, FaEnvelope, FaDollarSign, FaCog } from 'react-icons/fa'; // Import React Icons
+import { FaHome, FaCalendarAlt, FaFlask, FaPills, FaHeart, FaUsers, FaClipboardList, FaEnvelope, FaDollarSign, FaCog, FaBars, FaTimes } from 'react-icons/fa';
 import "../styles/Sidebarc.css";
 
 const Sidebar: React.FC = () => {
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   const menuItems = [
     { name: 'Home', icon: <FaHome />, path: '/' },
@@ -21,27 +23,54 @@ const Sidebar: React.FC = () => {
 
   const handleMenuClick = (path: string) => {
     navigate(path);
+    if (isMobile) {
+      setShowSidebar(false);
+    }
   };
 
+  const toggleSidebar = () => {
+    setShowSidebar(!showSidebar);
+  };
+
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); 
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <div className="sidebar">
-      <div className="logo">
-        <span className="logo-check">✓</span>
-        <span className="logo-text">medik</span>
+    <>
+     
+      {isMobile && (
+        <button className="mobile-menu-button" onClick={toggleSidebar}>
+          {showSidebar ? <FaTimes /> : <FaBars />}
+        </button>
+      )}
+
+      <div className={`sidebar ${showSidebar ? 'active' : ''} ${isMobile ? 'mobile' : ''}`}>
+        <div className="logo">
+          <span className="logo-check">✓</span>
+          <span className="logo-text">medik</span>
+        </div>
+        <nav className="sidebar-nav">
+          {menuItems.map((item, index) => (
+            <div
+              key={index}
+              className="sidebar-item"
+              onClick={() => handleMenuClick(item.path)}
+            >
+              <span className="sidebar-icon">{item.icon}</span>
+              <span className="sidebar-text">{item.name}</span>
+            </div>
+          ))}
+        </nav>
       </div>
-      <nav className="sidebar-nav">
-        {menuItems.map((item, index) => (
-          <div
-            key={index}
-            className="sidebar-item"
-            onClick={() => handleMenuClick(item.path)}
-          >
-            <span className="sidebar-icon">{item.icon}</span>
-            <span className="sidebar-text">{item.name}</span>
-          </div>
-        ))}
-      </nav>
-    </div>
+    </>
   );
 };
 
