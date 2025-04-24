@@ -9,6 +9,9 @@ interface PackageProps {
 
 const PackageItem: React.FC<PackageProps> = ({ name, description, icon }) => {
   return (
+
+  
+    <div className='pakages-card'>
     <div className="package-item">
       <div className="package-icon">{icon}</div>
       <div className="package-details">
@@ -18,6 +21,7 @@ const PackageItem: React.FC<PackageProps> = ({ name, description, icon }) => {
         </div>
         <div className="package-description">{description}</div>
       </div>
+    </div>
     </div>
   );
 };
@@ -34,21 +38,28 @@ const HealthPackageSection: React.FC = () => {
         icon: 'F',
       },
     ];
+    
+    
     return (
-        <div className="package-section">
-          <div className="section-header">
-            <h2>Health Package</h2>
+      <div className='sectiom-main'>
+       <div className='section-main'>
+       <h2 className="pacakage-title">Popular Product</h2> 
+        <div className="section-header">
             <a href="#" className="view-all">
               View all →
             </a>
-          </div>
-          <div className="package-list">
+            </div>
+       </div>
+      
+    
+          <div className="pakages-list">
             {packages.map((pkg, index) => (
               <PackageItem key={index} {...pkg} />
             ))}
           </div>
         </div>
-      );
+   
+    );
     };
     
     export default HealthPackageSection;

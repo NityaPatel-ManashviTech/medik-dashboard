@@ -41,9 +41,9 @@
   }
   
   .package-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 4px;
+   display: flex;
+   justify-content: space-between;
+    align-items: center;
   }
   
   .package-name {
@@ -56,4 +56,23 @@
     font-size: 13px;
     color: #667085;
   }
+  .pakages-card {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px 20px; 
+    min-height: 85px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .pakages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .more-options {
+    margin-left:80px;
+    cursor: pointer;
+  }
+  
   

@@ -9,9 +9,14 @@ import ConsultationSection from './ConsultationSection';
 
 const Dashboard: React.FC = () => {
   return (
-    <div className="dashboard">
+  <div className="main-page">
       <Header />
-      
+      <hr />
+      <div className="welcome-container">
+  <div className="welcome-text">Welcome Back</div>
+  <div className="welcome-name">Jubed Ahmed</div>
+</div>
+
 <div className="dashboard-content">
     <div className="dashboard-main">
         <DoctorSection/>

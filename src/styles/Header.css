@@ -17,9 +17,10 @@
     align-items: center;
     background-color: #ffffff;
     padding: 8px 16px;
+    justify-content:space-between;
     border-radius: 6px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    width: 100px;
   }
   
   .dropdown-selected {
@@ -29,6 +30,8 @@
   }
   
   .dropdown-arrow {
+  display: flex;
+
     font-size: 10px;
     color: #667085;
   }
@@ -36,16 +39,14 @@
   .search-bar {
     display: flex;
     align-items: center;
-    background-color: #ffffff;
     padding: 8px 16px;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
     width: 300px;
   }
   
   .search-icon {
     margin-right: 10px;
-    color: #667085;
+
   }
   
   .search-bar input {
@@ -53,6 +54,8 @@
     outline: none;
     width: 100%;
     font-size: 14px;
+    background: none; 
+ 
   }
   
   .header-right {
@@ -78,18 +81,20 @@
   }
   
   .welcome-container {
-    position: absolute;
-    top: 50px;
-    left: 0;
+    margin: 10px 10px;
+    padding: 10px 6px;
+
+    border-radius: 8px;
   }
   
   .welcome-text {
-    font-size: 14px;
-    color: #667085;
+    font-size: 18px;
+    color: #666;
   }
   
   .welcome-name {
     font-size: 22px;
     font-weight: bold;
-    color: #111827;
+    color: #333;
   }
+  

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "../styles/Header.css";  
+import "../styles/Header.css";
 const Header = () => {
     const [searchQuery,setSearchQuery]=useState("")
   return (
@@ -23,10 +23,7 @@ const Header = () => {
         <div className="notification-icon">🔔</div>
         <div className="profile-icon">👤</div>
       </div>
-      <div className="welcome-container">
-        <div className="welcome-text">Welcome Back</div>
-        <div className="welcome-name">Jubed Ahmed</div>
-      </div>
+     
     </div>
   );
 }

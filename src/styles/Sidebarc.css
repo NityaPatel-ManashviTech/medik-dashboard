@@ -41,9 +41,7 @@
     transition: background-color 0.3s;
   }
   
-  .sidebar-item:hover {
-    background-color: #f0f4ff;
-  }
+ 
   
   .sidebar-icon {
     width: 20px;
@@ -55,3 +53,9 @@
     color: #667085;
     font-size: 14px;
   }
+  .sidebar-text:hover{
+  color: #174ec6;
+  }
+  .sidebar-item:hover .sidebar-icon {
+    color: #007bff; 
+}

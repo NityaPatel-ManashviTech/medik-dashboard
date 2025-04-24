@@ -1,21 +1,22 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FaHome, FaCalendarAlt, FaFlask, FaPills, FaHeart, FaUsers, FaClipboardList, FaEnvelope, FaDollarSign, FaCog } from 'react-icons/fa'; // Import React Icons
 import "../styles/Sidebarc.css";
 
 const Sidebar: React.FC = () => {
   const navigate = useNavigate();
 
   const menuItems = [
-    { name: 'Home', icon: '🏠', path: '/' },
-    { name: 'Appointment', icon: '📅', path: '/appointment' },
-    { name: 'Lab Tests', icon: '🧪', path: '/lab-tests' },
-    { name: 'Medicine Order', icon: '💊', path: '/medicine-order' },
-    { name: 'Favourites', icon: '❤️', path: '/favourites' },
-    { name: 'Family', icon: '👪', path: '/family' },
-    { name: 'Prescription', icon: '📝', path: '/prescription' },
-    { name: 'Messages', icon: '✉️', path: '/messages' },
-    { name: 'Payments', icon: '💰', path: '/payments' },
-    { name: 'Settings', icon: '⚙️', path: '/settings' },
+    { name: 'Home', icon: <FaHome />, path: '/' },
+    { name: 'Appointment', icon: <FaCalendarAlt />, path: '/appointment' },
+    { name: 'Lab Tests', icon: <FaFlask />, path: '/lab-tests' },
+    { name: 'Medicine Order', icon: <FaPills />, path: '/medicine-order' },
+    { name: 'Favourites', icon: <FaHeart />, path: '/favourites' },
+    { name: 'Family', icon: <FaUsers />, path: '/family' },
+    { name: 'Prescription', icon: <FaClipboardList />, path: '/prescription' },
+    { name: 'Messages', icon: <FaEnvelope />, path: '/messages' },
+    { name: 'Payments', icon: <FaDollarSign />, path: '/payments' },
+    { name: 'Settings', icon: <FaCog />, path: '/settings' },
   ];
 
   const handleMenuClick = (path: string) => {

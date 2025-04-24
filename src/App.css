@@ -2,10 +2,11 @@
 .app-container {
   display: flex;
   height: 100vh;
+  background-color: #f6f5f8;
 }
 
 .main-content {
   flex: 1;
-  padding: 20px;
+  padding: 40px;
   overflow-y: auto;
 }

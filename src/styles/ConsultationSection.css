@@ -12,6 +12,7 @@
   
   .doctor-info {
     display: flex;
+
     align-items: center;
     margin-bottom: 16px;
   }
@@ -23,14 +24,18 @@
   .appointment-details {
     display: flex;
     gap: 16px;
+    background-color: #eaebef;
     margin-bottom: 16px;
   }
+
+ 
   
   .appointment-date, .appointment-time {
     display: flex;
     align-items: center;
     font-size: 13px;
     color: #667085;
+
   }
   
   .calendar-icon, .clock-icon {
@@ -125,6 +130,21 @@
     
     .appointment-details {
       flex-direction: column;
+ 
       gap: 8px;
     }
+  }
+  .consult-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+  }
+  .upcomingc-info{
+  display: flex;
+  }
+  input[type="date"], input[type="time"] {
+    background-color: transparent; 
+    border: none; 
+    outline: none;
+    color: inherit; 
   }
