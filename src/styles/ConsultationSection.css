@@ -1,0 +1,130 @@
+.consultation-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .consultation-card {
+    margin-top: 16px;
+  }
+  
+  .doctor-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .doctor-details {
+    flex: 1;
+  }
+  
+  .appointment-details {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .appointment-date, .appointment-time {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #667085;
+  }
+  
+  .calendar-icon, .clock-icon {
+    margin-right: 6px;
+  }
+  
+  .appointment-actions {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .cancel-btn, .reschedule-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .cancel-btn {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    color: #374151;
+  }
+  
+  .reschedule-btn {
+    background-color: #22c55e;
+    border: none;
+    color: #ffffff;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1200px) {
+    .doctor-cards {
+      grid-template-columns: 1fr;
+    }
+    
+    .dashboard-content {
+      flex-direction: column;
+    }
+    
+    .dashboard-main, .dashboard-side {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .app {
+      flex-direction: column;
+    }
+    
+    .sidebar {
+      width: 100%;
+      padding: 10px;
+    }
+    
+    .sidebar-nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .sidebar-item {
+      width: auto;
+    }
+    
+    .product-health-row {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .header-left, .header-right {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    .search-bar {
+      width: 100%;
+    }
+    
+    .welcome-container {
+      position: relative;
+      top: auto;
+      margin-top: 20px;
+    }
+    
+    .appointment-details {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }

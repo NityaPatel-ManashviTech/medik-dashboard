@@ -1,12 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+.app-container {
+  display: flex;
+  height: 100vh;
 }
 
-.app {
-  display: flex;
-  min-height: 100vh;
-  background-color: #f6f8fb;
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
 }

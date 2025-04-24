@@ -1,0 +1,92 @@
+.doctor-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .section-header h2 {
+    font-size: 18px;
+    color: #111827;
+  }
+  
+  .view-all {
+    font-size: 14px;
+    color: #2563eb;
+    text-decoration: none;
+  }
+  
+  .doctor-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .doctor-card {
+    display: flex;
+    align-items: center;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  
+  .doctor-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 16px;
+  }
+  
+  .doctor-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .doctor-info {
+    flex: 1;
+  }
+  
+  .doctor-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: #111827;
+    margin-bottom: 4px;
+  }
+  
+  .doctor-specialty {
+    font-size: 13px;
+    color: #667085;
+    margin-bottom: 4px;
+  }
+  
+  .doctor-rating {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #667085;
+  }
+  
+  .star {
+    color: #fbbf24;
+    margin-right: 4px;
+  }
+  
+  .reviews {
+    margin-left: 8px;
+    color: #667085;
+  }
+  
+  .doctor-arrow {
+    color: #667085;
+    cursor: pointer;
+  }
+  
