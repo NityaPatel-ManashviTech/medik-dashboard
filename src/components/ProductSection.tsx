@@ -1,4 +1,4 @@
-import React from 'react';
+
 import '../styles/ProductSection.css';
 import productImg from "../assets/img1.jpg";
 import productImg1 from "../assets/img2.jpg";

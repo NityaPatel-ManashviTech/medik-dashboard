@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import '../styles/Header.css';
 import { FiBell, FiUser } from 'react-icons/fi';
 
